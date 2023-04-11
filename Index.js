@@ -13,35 +13,35 @@ console.log(reverse)
 //null
 
 
-// function numbers(num){
-//     if(num.length <= 1){
-//         return num
-//     }
-//     let middle = Math.floor(num.length/2);
-//     let left =num.slice(0,middle);
-//     let right = num.slice(middle);
-//     console.log({right})
-//     console.log({left})
-//      numbersSort(numbers(left),numbers(right))
-// }
-// function numbersSort(){
-//     const newArray =[];
-//     while(left.length && right.length){
-//         if(left[0]< right[0]){
-//             newArray.push(left.shift())
-//         }else{
-//             newArray.push(right.shift())
-//         }
-//     }
-//     return [...newArray,...left,...right]
-// }
-// let num =[2,8,0,23,5,45,76]
-// console.log(numbers(num))
-// function binarySearch (num){
-//     let left = 0;
-//     let right = num.length -1;
+function numbers(num){
+    if(num.length <= 1){
+        return num
+    }
+    let middle = Math.floor(num.length/2);
+    let left =num.slice(0,middle);
+    let right = num.slice(middle);
+    console.log({right})
+    console.log({left})
+     numbersSort(numbers(left),numbers(right))
+}
+function numbersSort(){
+    const newArray =[];
+    while(left.length && right.length){
+        if(left[0]< right[0]){
+            newArray.push(left.shift())
+        }else{
+            newArray.push(right.shift())
+        }
+    }
+    return [...newArray,...left,...right]
+}
+let num =[2,8,0,23,5,45,76]
+console.log(numbers(num))
+function binarySearch (num){
+    let left = 0;
+    let right = num.length -1;
 
-// }
+}
 
 
 
