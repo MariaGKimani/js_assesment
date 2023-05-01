@@ -59,13 +59,8 @@ console.log(books);
 // //  If the book is not found in the library, the
 // // function should return a message indicating that the book is not available.
 // // function checkoutBook(booktitle){
-// //     x = Object.keys(isAvailable == true)
-// //     if(){
-
-// //     }else{
-
-// //     }
-// //  }
+    x = Object.keys(isAvailable == true)
+ 
 
 
 
@@ -74,13 +69,13 @@ console.log(books);
 // // Create a function returnBook that takes a book title as an argument and changes the
 // // book's isAvailable property to true. If the book is not found in the library, the function
 // // should return a message indicating that the book does not belong to the library.
-// function returnBook (bookstitle){
-//     this.title = bookstitle
-//    if(bookstitle === bookstitle.title){
-//     books.isAvailable = true
-//    }
-//    else{
-//     console.log(`The ${this.book} does not belong to the array`)
-//    }
-// }
-// console.log(returnBook(books))
+function returnBook (bookstitle){
+    this.title = bookstitle
+   if(bookstitle === bookstitle.title){
+    books.isAvailable = true
+   }
+   else{
+    console.log(`The ${this.book} does not belong to the array`)
+   }
+}
+console.log(returnBook(books))
