@@ -1,93 +1,93 @@
-//Write a function that takes in a string and returns it when reversed
-//let food = “eating”
-function foodReverse(string){
-    const reverseString = string.split("").reverse().join("");
-    return reverseString
-}
-let food = "eating"
-let  reverse =foodReverse(food)
-console.log(reverse)
-
-
-//Write a function that takes in the following array and consoles the target if it is found else
-//null
-
-
-function numbers(num){
-    if(num.length <= 1){
-        return num
+// 1.function that takes in a string and returns it when reversed
+function name(color){
+    let newColor = color.split("").reverse().join("");
+    return newColor
     }
-    let middle = Math.floor(num.length/2);
-    let left =num.slice(0,middle);
-    let right = num.slice(middle);
-    console.log({right})
-    console.log({left})
-     numbersSort(numbers(left),numbers(right))
+    let color = "green"
+    console.log(name(color))
+// 2.a function that takes in the following array and consoles the target if it is found else null
+function merge(array){
+    if(array.length <=1){
+        return array
+    }
+    let middle= Math.floor(array.length/2)
+    let left = array.slice(0,middle)
+    let right =array.slice(middle)
+    return mergeSort(merge(left),merge(right))
 }
-function numbersSort(){
-    const newArray =[];
+function mergeSort(left,right){
+    let empty=[]
     while(left.length && right.length){
-        if(left[0]< right[0]){
-            newArray.push(left.shift())
-        }else{
-            newArray.push(right.shift())
+        if(left[0]<right[0]){
+        empty.push(left.shift())
         }
+        else{
+            empty.push(right.shift())
+        }
+    }return[...empty,...left,...right]
+}
+let num = [2,8,0,23,5,45,76]
+console.log(merge(num))
+function Bsearch(num,target){
+    let leftIndex =0;
+    let rightIndex =num.length-1;
+while(leftIndex<=rightIndex){
+    let middle = Math.floor(leftIndex+rightIndex/2)
+    if(num[middle]===target){
+        return middle
     }
-    return [...newArray,...left,...right]
+    else if(num[middle]> target){
+        right=middle-1
+    }
+  else{
+    left=middle+1
+  }
+  return null;
 }
-let num =[2,8,0,23,5,45,76]
-console.log(numbers(num))
-function binarySearch (num){
-    let left = 0;
-    let right = num.length -1;
-
 }
-
-
-
-//Given years between 2000 and 2023, console all the leap years in the following
-//sentence, i.e “2020 is a leap year” if not console log i.e “2001 is not a leap year”
-
-//N.0 4
-//Given a range of numbers from 0 to 100, console”Fizz” if the numbers are divisible by 3,
-//“Buzz” if the numbers are divisible by 5, and “FizzBuzz” if divisible by both 3 and 5.
-
-
-for (x = 0; x <= 100; x++) {
-    if (x % 3 == 0 && x % 5 == 0) {
-      console.log("FizzBuzz")
-    }else if (x % 3 == 0) {
-      console.log("Fizz")
-    } else if (x % 5 == 0) {
-      console.log("Buzz")
-    } else {
-      console.log(x)
+let num1 = [0,2,5,8,23,45,76]
+let target= 23
+console.log(Bsearch(num,target));
+// 3. Given years between 2000 and 2023, console all the leap years in the following
+// sentence, i.e “2020 is a leap year” if not console log i.e “2001 is not a leap year”
+for(let i = 1000; i <= 2023; i++){
+    if(i%4 == 0 || i%100 ==0 || i%400 == 0){
+        console.log(`${i} is leap year`)
+    }
+    else{
+        console.log(`${i} not leap year`)
     }
 }
-  
-
-
-//N.0 5
-//Write a function that takes in an array of numbers and returns an array that has all
-//elements multiplied by 4.
-
-function arrayNumbers(numbers){
-    let numArray = [12,87,45,75,23,64,73]
-    let num1 =numArray.map(numA => numA *4)
-    console.log(num1)
-
+// 4. Given a range of numbers from 0 to 100, console”Fizz” if the numbers are divisible by 3,
+// “Buzz” if the numbers are divisible by 5, and “FizzBuzz” if divisible by both 3 and 5.
+for(let i = 0; i<= 100; i++){
+    if(i%3 == 0){
+        console.log("Fizz")
+    }
+    else if(i%5 == 0){
+        console.log("Buzz")
+    }
+    if(i%3 == 0 && i%5 == 0){
+        console.log("FizzBuzz")
+    }
+    else{
+        console.log(i)
+    }
 }
-arrayNumbers()
-
-
-
-//N.06
-//Write a function that takes in an array of strings and returns an array with every element
-//turned into a number
-
-function Arraystrings(array) {
-    let nums = ["10","24","45","56","67"];
-   let ints = nums.map(num => parseInt(num));
-   console.log(ints)  
+// 5. Write a function that takes in an array of numbers and returns an array that has all
+// elements multiplied by 4.
+function ArrayNumbers(numArray){
+    for(i =0; i < numArray.length; i++){
+        console.log(numArray[i] * 4)
+    }
 }
-Arraystrings()
+numArray = [12,87,45,75,23,64,73]
+ArrayNumbers(numArray);
+// 6. Write a function that takes in an array of strings and returns an array with every element turned into a number
+function arrayFunction(array){
+let array2 = array.map(arr => { return parseInt(arr)
+})
+console.log(array2)
+}
+let array = ["10","24","45","56","67"];
+arrayFunction(array)
