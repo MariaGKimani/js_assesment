@@ -22,29 +22,27 @@ console.log(getAvailableBooks());
 // 2. Create a function getBooksByAuthor that takes 
 // an author's name as an argument and
 // returns an array of all books by that author.
-function getBooksByAuthor(author){
-    // const Allbooks =books.map({name:name.title})
-    const Allbooks = books.forEach((title)=>{
-        return title.author})
-    }
+function getBooksByAuthor(bauthor){
+    const Allbooks = books.author
+        if (bauthor.author = books.author){
+            return books.values
+        }
+}
+console.log(getBooksByAuthor());
+ 
 console.log(getBooksByAuthor('J.D. Salinger'));
+
+
 // Create a function addNewBook that takes a book object 
 // as an argument and adds it to the library, ensuring
 // that the new book has all required properties (title, author,
 // publicationYear, and isAvailable).
 
 
-function addNewBook(book)
-    // Object.assign(
-
-        
-    //     author:
-    //     publicationYear:
-    //     isAvailable:
-    //     title:
-    //     )
-    // }
-
+function addNewBook(book){
+   x =  books.assign(books)
+}
+addNewBook()
 
 
 
@@ -52,15 +50,15 @@ function addNewBook(book)
 //  as an argument and changes the book's isAvailable property to false.
 //  If the book is not found in the library, the
 // function should return a message indicating that the book is not available.
-function checkoutBook(booktitle){
-    x = Object.keys(isAvailable == true)
-    if(){
+// function checkoutBook(booktitle){
+//     x = Object.keys(isAvailable == true)
+//     if(){
 
-    }else{
+//     }else{
 
-    }
- }
- 
+//     }
+//  }
+
 
 
 
@@ -68,3 +66,13 @@ function checkoutBook(booktitle){
 // Create a function returnBook that takes a book title as an argument and changes the
 // book's isAvailable property to true. If the book is not found in the library, the function
 // should return a message indicating that the book does not belong to the library.
+function returnBook (bookstitle){
+    this.title = bookstitle
+   if(bookstitle === bookstitle.title){
+    books.isAvailable = true
+   }
+   else{
+    console.log(`The ${this.book} does not belong to the array`)
+   }
+}
+console.log(returnBook(books))
